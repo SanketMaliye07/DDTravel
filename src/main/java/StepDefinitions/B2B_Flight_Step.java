@@ -205,7 +205,7 @@ public class B2B_Flight_Step extends BaseClass {
 	public void User_select_the_Advanced_Search_option() throws InterruptedException 
 	{		HOME = new B2B_Flight_POM(driver);
 
-		HOME.clickAdvancebooking();	
+		HOME.clickAdvancebooking(driver);	
 
 	}
 	

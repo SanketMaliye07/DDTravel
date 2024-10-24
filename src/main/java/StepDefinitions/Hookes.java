@@ -33,7 +33,7 @@ public class Hookes extends BaseClass {
 	
 	}
 	
-    @After(order = 0)
+    //@After(order = 0)
 	public void closeBrowser() throws Exception
 	{
 	  driver.quit();
@@ -41,7 +41,7 @@ public class Hookes extends BaseClass {
 	
 	}
     
-	@AfterAll
+	//@AfterAll
 	public static void sendEmailAfterAllTests() throws Exception {
 		Emailreport sm = new Emailreport();
 		sm.mail();

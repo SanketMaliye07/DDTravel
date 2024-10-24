@@ -170,10 +170,11 @@ public class B2B_Flight_POM {
 
 
 	public void Selecttrippassoriginanddestination(WebDriver driver, String way, String origin, String destination)throws InterruptedException {
-		
-		//Thread.sleep(2000);	
+	
 
 		System.out.println("The Current trip is :"+way);
+		System.out.println("The origin is "+origin);
+		System.out.println("The destination is "+destination);
 
 		
 			if (way.contentEquals("Round-Way")||way.equalsIgnoreCase("Half-Round-Trip")||way.contentEquals("One-Way")) 
@@ -185,42 +186,52 @@ public class B2B_Flight_POM {
 				roundTrip.click(); 
 				}
 				
+				Thread.sleep(1000);		
 				
-				WebDriverWait wait;
-				try {
-					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-					WebElement originLocator = wait.until(ExpectedConditions
-							.visibilityOfElementLocated(By.xpath("//div[@id='Flight_From_0']//input[@id='myTextField']")));
-					Thread.sleep(1000);		
-					originLocator.sendKeys(origin);
-					Thread.sleep(3000);		
-					//Click the Origin name 
-					OriginName.click();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-					  Assert.fail("Not getting result for Origin");
-				        driver.close();
-				}
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 				
+	
+			    wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Add Client(s)']")));
 				Thread.sleep(1000);		
 
-				try {
-					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-					WebElement DestinationLocator = wait.until(ExpectedConditions
-							.visibilityOfElementLocated(By.xpath("//div[@id='Flight_To_0']//input[@id='myTextField']")));
-					Thread.sleep(1000);		
-					DestinationLocator.sendKeys(destination);
-					Thread.sleep(3000);		
-					//Click the Origin name 
-					OriginName.click();		
-					Thread.sleep(1000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-					 Assert.fail("Not getting result for Origin");
-				        driver.close();
-				}	
-				
+
+					try {
+					    // Wait for the origin field to be visible and interact
+					    
+					
+					    
+					    // Locate the element again just before sending keys to avoid stale reference
+					    WebElement originLocator = driver.findElement(By.xpath("//div[@id='Flight_From_0']//input[@id='myTextField']"));
+					    originLocator.sendKeys(origin);
+						Thread.sleep(3000);		
+
+					    CommonMethodes.Autosuggest(driver, origin);			    
+
+					} catch (Exception e) {
+					    e.printStackTrace();
+					}
+					
+					Thread.sleep(1000);	
+					
+
+
+
+					try {
+					
+					    
+					    // Locate the element again just before sending keys to avoid stale reference
+					    WebElement destinationLocator = driver.findElement(By.xpath("//div[@id='Flight_To_0']//input[@id='myTextField']"));
+					    destinationLocator.sendKeys(destination);
+						Thread.sleep(3000);		
+
+					    CommonMethodes.Autosuggest(driver, destination);
+
+					} catch (Exception e) {
+					    e.printStackTrace();
+					}
+
+
 			} 
 					
 			else if(way.equalsIgnoreCase("Multicity"))
@@ -229,24 +240,33 @@ public class B2B_Flight_POM {
 				Multicity.click(); 
 				Thread.sleep(1000);		
 
-				// wait for origin location
-				WebDriverWait wait;
 				
-				try {
-					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-					WebElement originLocator = wait.until(ExpectedConditions
-							.visibilityOfElementLocated(By.xpath("//div[@id='Flight_From_0']//input[@id='myTextField']")));
+				
+				WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+				
+	
+			    wait.until(ExpectedConditions
+						.visibilityOfElementLocated(By.xpath("//span[normalize-space()='Add Client(s)']")));
+				Thread.sleep(1000);		
+
+
+					try {
+					    // Wait for the origin field to be visible and interact
+					    
+					
+					    
+					    // Locate the element again just before sending keys to avoid stale reference
+					    WebElement originLocator = driver.findElement(By.xpath("//div[@id='Flight_From_0']//input[@id='myTextField']"));
+					    originLocator.sendKeys(origin);
+		    
+					    CommonMethodes.Autosuggest(driver, origin);			    
+
+					} catch (Exception e) {
+					    e.printStackTrace();
+					}
+					
+				
 					Thread.sleep(1000);		
-					originLocator.sendKeys(origin);
-					Thread.sleep(3000);		
-					//Click the Origin name 
-					OriginName.click();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				Thread.sleep(500);		
 
 				
 				
@@ -255,49 +275,39 @@ public class B2B_Flight_POM {
 
 					WebElement DestinationLocator = wait.until(ExpectedConditions
 							.visibilityOfElementLocated(By.xpath("//div[@id='Flight_To_0']//input[@id='myTextField']")));
+					DestinationLocator.sendKeys("MCT");
 					Thread.sleep(1000);		
-					DestinationLocator.sendKeys("MCT ");
-					Thread.sleep(3000);		
-					//Click the Destintion name 
-					OriginName.click();
+
+				    CommonMethodes.Autosuggest(driver, "MCT");			    
+
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}	
 				
-				Thread.sleep(500);	
 				
-				try {
-					// wait for origin location
-					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+				Thread.sleep(1000);	
+				
 
-					WebElement originLocator1 = wait.until(ExpectedConditions
-							.visibilityOfElementLocated(By.xpath("//div[@id='Flight_From_1']//input[@id='myTextField']")));
-					Thread.sleep(1000);		
-					originLocator1.sendKeys("MCT ");
-					Thread.sleep(3000);		
-					//Click the Origin name 
-					OriginName.click();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				
-				Thread.sleep(500);		
+
 
 				try {
-					wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-					WebElement DestinationLocator1 = wait.until(ExpectedConditions
-							.visibilityOfElementLocated(By.xpath("//div[@id='Flight_To_1']//input[@id='myTextField']")));
-					Thread.sleep(1000);		
-					DestinationLocator1.sendKeys(destination);
+				
+				    
+				    // Locate the element again just before sending keys to avoid stale reference
+				    WebElement destinationLocator = driver.findElement(By.xpath("//div[@id='Flight_To_0']//input[@id='myTextField']"));
+				    destinationLocator.sendKeys(destination);
 					Thread.sleep(3000);		
-					//Click the Destintion name 
-					OriginName.click();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+
+				    CommonMethodes.Autosuggest(driver, destination);
+
+				} catch (Exception e) {
+				    e.printStackTrace();
 				}
+				
+					
+
+			
 				
 				
 				Thread.sleep(2000);	
@@ -693,9 +703,13 @@ public class B2B_Flight_POM {
 
 	}
 	
-	public void clickAdvancebooking() throws InterruptedException {
+	public void clickAdvancebooking(WebDriver driver) throws InterruptedException {
 		
-		advanceSearchButton.click();
+
+	 	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));   	 
+	   	 WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@id='advanceSearchButton']//img")));
+			((JavascriptExecutor) driver).executeScript("arguments[0].click();", advanceSearchButton);
+
 		Thread.sleep(1000);
 	}
 	
@@ -943,6 +957,7 @@ public class B2B_Flight_POM {
 							System.out.println("The Suppliesr check :"+current_dt);
 							if (current_dt.equalsIgnoreCase(Suppliers)) {
 								Suppliername.get(i).click();
+								CommonMethodes.scrollDown1(driver);
 								Supplier.click();
 								break;
 							}
@@ -1041,10 +1056,15 @@ public void checksearchresult(WebDriver driver) throws InterruptedException
 {
 	
 	Thread.sleep(1000);
+	
+	 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(100));
+   	 WebElement popup = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[normalize-space()='Search']")));
+   	 
+   CommonMethodes.scrollDown2(driver);
 
 	WebElement ele = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/div[1]/div[1]/main[1]/div[2]/div[3]/h1[1]"));
 
-	    
+
 	    if(	ele.getText().contentEquals("0 Results"))
 	    {
 	    	

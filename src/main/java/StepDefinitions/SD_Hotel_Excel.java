@@ -72,7 +72,7 @@ public class SD_Hotel_Excel extends BaseClass{
 		 	 
 		 	row=RowNumber;
 		 	
-		 	String AREA_NAME = testData.get(row).get("AREA_NAME");
+		 	String AREA_NAME = testData.get(row).get("HOTEL_NAME");
 			String FARE_TYPE = testData.get(row).get("FARE_TYPE");
 			
 			System.out.println("My FARE TYPE IS :"+FARE_TYPE);

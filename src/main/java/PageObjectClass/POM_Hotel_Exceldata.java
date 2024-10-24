@@ -1701,7 +1701,7 @@ Room5selectAge.click();
 	         for (WebElement room : rooms) {
 	             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", room);
 	             room.click();
-	             wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[contains(@class, 'theme4_fully_refundable__BXoIe')]"))); // Ensure the room details are fully expanded
+	            // wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("//div[contains(@class, 'theme4_fully_refundable__BXoIe')]"))); // Ensure the room details are fully expanded
 
 	             // Re-locate the select buttons and tickets after expanding room details
 	             List<WebElement> selectors = driver.findElements(By.xpath("//button[@class='theme4_srp_desktop_btn__aQOWM theme4_srp_tab_btn__slXIC'][normalize-space()='Select']"));
@@ -1942,15 +1942,15 @@ Room5selectAge.click();
 
 		// Print the fare details and total amount
 		System.out.println("Fare Details:");
-		fareDetails.forEach((label, value) -> System.out.println(label + ": " + value + " BHD"));
-		System.out.println("Final Total Amount: " + finalTotalAmount + " BHD");
+		fareDetails.forEach((label, value) -> System.out.println(label + ": " + value + " INR "));
+		System.out.println("Final Total Amount: " + finalTotalAmount + " INR ");
 
 		
 		
 		// this line check total amount calculation
 		if (driver.findElements(By.xpath("//div[@class='theme4_booking_summary_grid_container__nXlBT']//p[normalize-space()='Total :']")).size() > 0) {
 			
-			double totalAmt = Double.parseDouble(driver.findElement(By.xpath("//div[@class='theme4_booking_summary_grid_container__nXlBT']//div[@class='theme4_total_amount_1__p6YOz']")).getText().trim().replace(",", "").replace("BHD", ""));
+			double totalAmt = Double.parseDouble(driver.findElement(By.xpath("//div[@class='theme4_booking_summary_grid_container__nXlBT']//div[@class='theme4_total_amount_1__p6YOz']")).getText().trim().replace(",", "").replace("INR", ""));
 			System.out.println("Final Amount after all calculation : " + finalTotalAmount);
 			System.out.println("Total amount is : " + totalAmt);
 

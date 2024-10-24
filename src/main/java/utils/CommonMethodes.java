@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -12,6 +13,7 @@ import org.apache.commons.lang.RandomStringUtils;
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -242,6 +244,29 @@ System.out.println(resoursePath());
 
 		}
 	   
+		
+		public static void Autosuggest(WebDriver driver,String city)
+		{
+			  // Wait for the autocomplete suggestions
+		    List<WebElement> ORN = driver.findElements(By.xpath("//div[@class='theme4_flight_autocomplete_tag__Fhkr6']"));
+		    
+		    if (!ORN.isEmpty()) {
+		        for (WebElement searchText : ORN) {
+		            String text = searchText.getText();
+		            if (text.equalsIgnoreCase(city)) {
+		                //searchText.click();
+						((JavascriptExecutor) driver).executeScript("arguments[0].click();", searchText);
+
+		                break;
+		            }
+		        }
+		    } else {
+		        System.out.println("The origin city is not available: " + city);
+		    }
+		
+			
+			
+		}
 	   
 	   
 	   

@@ -46,7 +46,9 @@ public class BaseClass extends CommonMethodes {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
-                chromeOptions.addArguments("--remote-allow-origins=*","--headless=new");
+//                chromeOptions.addArguments("--remote-allow-origins=*","--headless=new");
+                chromeOptions.addArguments("--remote-allow-origins=*");
+
                 driver = new ChromeDriver(chromeOptions);
                 break;
             case "firefox":

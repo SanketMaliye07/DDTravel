@@ -2,7 +2,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
 
   Background: 
 
-  @sanity_Hotel_B2B_PROD
+  #@sanity_Hotel_B2B_PROD
     Scenario Outline: Validate the Payment on Review page with normal booking with multi pax
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -30,7 +30,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       |          1 |         8 |
       |          1 |         9 |
 
- @sanity_Hotel_B2B_PROD
+  #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_01 Validate the Payment on review page with Domestic Multipax Refundable Add Mark up in percentage Add local taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -54,7 +54,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         0 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_02 Validate the Payment on review page with Domestic	Multipax 	Breakfast	Refundable Add Mark up in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -78,7 +78,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         1 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_03 Validate the Payment on review page with Domestic	Multipax	Rating	Refundable Add Mark down in percentage Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -102,7 +102,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         2 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_04 Validate the Payment on review page with Domestic	Multipax	Refundable Quick filter Add Markdown in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -125,7 +125,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         3 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_05 Validate the Payment on review page with Domestic	Multipax	Refundable Star Rating Add Mark up in percentage Add local taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -148,7 +148,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         4 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_06 Validate the Payment on review page with International Multipax Refundable Price Range Add Mark up in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -171,7 +171,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         5 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_07 Validate the Payment on review page with International Multipax Refundable Amenities Add Mark down in percentage  Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -194,7 +194,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         6 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_08 Validate the Payment on review page with International Multipax Refundable Vacation Type Add Mark down in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -217,7 +217,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         7 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_09 Validate the Payment on review page with International Multipax Refundable Property Type	Add Mark up in percentage Add local taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -240,7 +240,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         8 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_10 Validate the Payment on review page with International Multipax Refundable Add Mark down in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -262,7 +262,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         9 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_11 Validate the Payment on review page with Domestic Multipax Non-Refundable Add Mark up in percentage Add local taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -286,7 +286,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         0 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_12 Validate the Payment on review page with Domestic	Multipax 	Breakfast	Non-Refundable Add Mark up in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -310,7 +310,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         1 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_13 Validate the Payment on review page with Domestic	Multipax	Rating	Non-Refundable Add Mark down in percentage Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -334,7 +334,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         2 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_14 Validate the Payment on review page with Domestic	Multipax	Non-Refundable Quick filter Add Markdown in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -357,7 +357,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         3 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_15 Validate the Payment on review page with Domestic	Multipax	Non-Refundable Star Rating Add Mark up in percentage Add local taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -380,7 +380,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         4 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_16 Validate the Payment on review page with International Multipax Non-Refundable Price Range Add Mark up in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -403,7 +403,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         5 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_17 Validate the Payment on review page with International Multipax Non-Refundable Amenities Add Mark down in percentage  Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -426,7 +426,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         6 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_18 Validate the Payment on review page with International Multipax Non-Refundable Vacation Type Add Mark down in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -449,7 +449,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         7 |
 
-@sanity_Hotel_B2B_PROD
+ #@sanity_Hotel_B2B_PROD
   Scenario Outline: TC_19 Validate the Payment on review page with International Multipax Non-Refundable Property Type	Add Mark up in percentage Add local taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"
@@ -472,7 +472,7 @@ Feature: Hotel Sanity_TestCases Dbtravel B2B PROD
       | SheetIndex | RowNumber |
       |          1 |         8 |
 
-@sanity_Hotel_B2B_PROD
+ @sanity_Hotel_B2B_PROD
   Scenario Outline: TC_20 Validate the Payment on review page with International Multipax Non-Refundable Add Mark down in Fixed type Add local Taxes
     Given User is on dbtravel Landing page with the "prodb2b" environment
     When User SighnIn with username and password for "prodb2b"

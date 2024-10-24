@@ -14,18 +14,18 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
  	    
-	  	  
+	  	   
 features={"src\\test\\java\\Features"},	
 glue="StepDefinitions",
 monochrome = true,
-tags="@sanity_Flight_B2B_PROD",
+tags="@sanity_Hotel_B2B_PROD",
 plugin= {"pretty",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"timeline:test-output-thread/",
 		"rerun:target/failedrerun.txt" 
 	         	              
-                                                                                                                                                                                                                	                                                                                                            	                                                                                                                                          	      
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	                                                  	                              
+                                                                                                                                                                                                                                                                                                                    	                                                                                                            	                                                                                                                                          	      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          	                                                  	                              
 }                         
 )    
     
